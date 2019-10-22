@@ -37,7 +37,7 @@ def main(server=SERVER):
     s=network.WLAN(network.STA_IF)
     s.active(True)
     #print(s.scan())
-    s.connect('ThingsLab - Home','Qq1-Internet')
+    s.connect('SSID','PASSWORD')
     c = MQTTClient(CLIENT_ID, server,port=1883,user="hi1",password="hello1")
     # Subscribed messages will be delivered to this callback1
     c.set_callback(sub_cb)
